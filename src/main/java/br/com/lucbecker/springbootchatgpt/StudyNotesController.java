@@ -1,11 +1,10 @@
-package br.com.lucbecker.springbootchatgpt.controller;
+package br.com.lucbecker.springbootchatgpt;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.lucbecker.springbootchatgpt.service.StudyNotesServiceChatGPT;
 import reactor.core.publisher.Mono;
 
 @RestController

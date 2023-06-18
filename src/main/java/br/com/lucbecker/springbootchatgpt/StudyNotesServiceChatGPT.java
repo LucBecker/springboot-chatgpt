@@ -1,4 +1,4 @@
-package br.com.lucbecker.springbootchatgpt.service;
+package br.com.lucbecker.springbootchatgpt;
 
 import java.util.List;
 
@@ -49,8 +49,8 @@ record ChatGPTRequest(String model, String prompt,
 
 }
 
-public record ChatGPTResponse(List<Choice> choices) {
+record ChatGPTResponse(List<Choice> choices) {
 }
 
-public record Choice(String text){
+record Choice(String text){
 }
