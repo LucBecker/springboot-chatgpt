@@ -2,6 +2,7 @@ package br.com.lucbecker.springbootchatgpt;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -15,11 +16,12 @@ public class StudyNotesServiceChatGPT {
 
     private WebClient webClient;
 
-    public StudyNotesServiceChatGPT(WebClient.Builder builder) {
+    public StudyNotesServiceChatGPT(WebClient.Builder builder,
+    @Value("${openai.api.key}") String apiKey) {
         this.webClient = builder
         .baseUrl("https://api.openai.com/v1/completions")
         .defaultHeader("Content-Type", "application/json")
-        .defaultHeader("Authorization", String.format"(Bearer %s", apiKey))
+        .defaultHeader("Authorization", String.format("Bearer %s", apiKey))
         .build();
     }
 
