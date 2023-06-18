@@ -1,9 +1,10 @@
 <h1 align="center">
-  <img width="82" alt="springboot-chatgtp-img2" src="https://github.com/LucBecker/agendalive-front/assets/108952468/535e5b1b-f39d-4094-b419-c0647c6f7b35">
+ <img width="111" alt="springboot-chatgtp-img2" src="https://github.com/LucBecker/agendalive-front/assets/108952468/dbc3e109-c98e-43ac-a303-cb298286cbfc">
 </h1>
 
+<h1 align="center">
 <img width="399" alt="springboot-chatgtp-img" src="https://github.com/LucBecker/agendalive-front/assets/108952468/1eb688a1-89ff-4587-a0ca-87bdede2b60f">
-
+</h1>
 
 <br>
 
