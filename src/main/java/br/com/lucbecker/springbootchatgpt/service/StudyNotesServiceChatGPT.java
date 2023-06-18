@@ -49,8 +49,8 @@ record ChatGPTRequest(String model, String prompt,
 
 }
 
-record ChatGPTResponse(List<Choice> choices) {
+public record ChatGPTResponse(List<Choice> choices) {
 }
 
-record Choice(String text){
+public record Choice(String text){
 }
