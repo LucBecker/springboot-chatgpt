@@ -1,4 +1,4 @@
-package br.com.lucbecker.springbootchatgpt;
+package br.com.lucbecker.springbootchatgpt.services;
 
 import java.util.List;
 
@@ -25,12 +25,13 @@ public class StudyNotesServiceChatGPT {
         .build();
     }
 
-    public Mono<ChatGPTResponse> createStudyNotes(String topic){
+    public Mono<String> createStudyNotes(String topic){
         ChatGPTRequest request = createStudyRequest(topic);
 
         return webClient.post().bodyValue(request)
             .retrieve()
-            .bodyToMono(ChatGPTResponse.class);
+            .bodyToMono(ChatGPTResponse.class)
+            .map(response -> response.choices().get(0).text());
     }
 
     private ChatGPTRequest createStudyRequest(String topic) {

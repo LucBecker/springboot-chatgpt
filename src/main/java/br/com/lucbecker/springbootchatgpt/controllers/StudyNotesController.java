@@ -1,10 +1,11 @@
-package br.com.lucbecker.springbootchatgpt;
+package br.com.lucbecker.springbootchatgpt.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.lucbecker.springbootchatgpt.services.StudyNotesServiceChatGPT;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -15,8 +16,7 @@ public class StudyNotesController {
 
     @PostMapping("study-notes")
     public Mono<String> createStudyNotes(@RequestBody String topic){
-        return service.createStudyNotes(topic).map(
-            response -> response.choices().get(0).text());
+        return service.createStudyNotes(topic);
     }
     
 }
